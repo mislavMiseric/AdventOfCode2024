@@ -5,7 +5,8 @@
 
 ## **Day1:**  
 
-Install go  
+Install GO  
+
 For part one:  
 - Execute: `go run Day1_part1.go`  
 
@@ -27,6 +28,7 @@ For part two:
 
 ## **Day4:**  
 Open Day4.html in browser -> Load input file(from resource/day4 location)  
+
 For part one:  
 - Press `"Calculate Part One" button`  
 
