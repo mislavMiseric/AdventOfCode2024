@@ -29,3 +29,7 @@ Execute: groovy Day6.groovy
 **Day7:**
 Install Python
 Execute: python Day7.py
+
+**Day8:**
+Install Kotlin
+Execute: kotlinc -script Day8.kts
