@@ -38,7 +38,12 @@ For part two:
 
 ## **Day5:**  
 Install PHP  
-Execute: `php -f Day5.php`  
+
+For part one:  
+- Execute: `php Day5Part1.php`  
+
+For part two:  
+- Execute: `php Day5Part2.php`  
 
 
 ## **Day6:**  
