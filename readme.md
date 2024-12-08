@@ -54,3 +54,18 @@ Execute: `groovy Day6.groovy`
 ## **Day7:**  
 Install Python  
 Execute: `python Day7.py`  
+
+
+## **Day8:**  
+Install Kotlin  
+
+For part one:  
+- Execute: `kotlinc -script Day8Par1.kts`  
+
+For part two:  
+- Execute: `kotlinc -script Day8Part2.kts`  
+
+
+## **Day9:**  
+Install Scala
+Execute: `scala Day9.scala`
