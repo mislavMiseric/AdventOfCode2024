@@ -69,3 +69,13 @@ For part two:
 ## **Day9:**  
 Install Scala
 Execute: `scala Day9.scala`
+
+
+## **Day10:**  
+Install Ruby
+Execute: `ruby Day10.rb`
+
+
+## **Day11:**  
+Install Perl
+Execute: `perl Day11.pl`
