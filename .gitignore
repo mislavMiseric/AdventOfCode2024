@@ -5,4 +5,4 @@ input.txt
 .bsp
 
 # c
-.out
+*.out
