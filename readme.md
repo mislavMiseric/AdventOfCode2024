@@ -84,3 +84,8 @@ Execute: `ruby Day10.rb`
 ## **Day11:**  
 Install Perl
 Execute: `perl Day11.pl`
+
+## **Day12:**  
+Install gcc
+Execute: `gcc Day12.c -o Day12.out`
+Execute: `Day12.out`

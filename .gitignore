@@ -3,3 +3,6 @@ input.txt
 # scala
 .scala-build
 .bsp
+
+# c
+.out
