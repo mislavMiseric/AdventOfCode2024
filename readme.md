@@ -68,7 +68,12 @@ For part two:
 
 ## **Day9:**  
 Install Scala
-Execute: `scala Day9.scala`
+
+For part one:  
+- Execute: `scala Day9Part1.scala`  
+
+For part two:  
+- Execute: `scala Day9Part2.scala`  
 
 
 ## **Day10:**  
