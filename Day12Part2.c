@@ -36,42 +36,37 @@ int countSidesForAllDirections(int i, int j, char lines[200][200], int rowSize, 
     return sides;
 }
 
+int countSidesForAllDirectionsAndSetFields(int* occurrence, int i, int j, char lines[200][200], int rowSize, int colSize, char lowercaseChar){
+    ++(*occurrence);
+    int sides = countSidesForAllDirections(i, j, lines, rowSize, colSize, lowercaseChar);
+    lines[i][j] = lowercaseChar;
+    return sides;
+}
+
 int checkRegion(int* occurrence, int i, int j, char lines[200][200], int rowSize, int colSize, char lowercaseChar){
     int sides = 0;
     if(i>0 && lines[i-1][j] == (lowercaseChar-32)){
-        ++(*occurrence);
-        sides += countSidesForAllDirections(i-1, j, lines, rowSize, colSize, lowercaseChar);
-        lines[i-1][j] = lowercaseChar;
+        sides += countSidesForAllDirectionsAndSetFields(occurrence, i-1, j, lines, rowSize, colSize, lowercaseChar);
         sides += checkRegion(occurrence, i-1, j, lines, rowSize, colSize, lowercaseChar);
     }
     if(j>0 && lines[i][j-1] == (lowercaseChar-32)){
-        ++(*occurrence);
-        sides += countSidesForAllDirections(i, j-1, lines, rowSize, colSize, lowercaseChar);
-        lines[i][j-1] = lowercaseChar;
+        sides += countSidesForAllDirectionsAndSetFields(occurrence, i, j-1, lines, rowSize, colSize, lowercaseChar);
         sides += checkRegion(occurrence, i, j-1, lines, rowSize, colSize, lowercaseChar);
     }
     if(i<(rowSize-1) && lines[i+1][j] == (lowercaseChar-32)){
-        ++(*occurrence);
-        sides += countSidesForAllDirections(i+1, j, lines, rowSize, colSize, lowercaseChar);
-        lines[i+1][j] = lowercaseChar;
+        sides += countSidesForAllDirectionsAndSetFields(occurrence, i+1, j, lines, rowSize, colSize, lowercaseChar);
         sides += checkRegion(occurrence, i+1, j, lines, rowSize, colSize, lowercaseChar);
     }
     if(j<(colSize-1) && lines[i][j+1] == (lowercaseChar-32)){
-        ++(*occurrence);
-        sides += countSidesForAllDirections(i, j+1, lines, rowSize, colSize, lowercaseChar);
-        lines[i][j+1] = lowercaseChar;
+        sides += countSidesForAllDirectionsAndSetFields(occurrence, i, j+1, lines, rowSize, colSize, lowercaseChar);
         sides += checkRegion(occurrence, i, j+1, lines, rowSize, colSize, lowercaseChar);
     }
     
     return sides;
 }
 
-long countPriceForArea(int i, int j, char lines[200][200], int rowSize, int colSize, char lowercaseChar){
-    int occurrence = 1;
-    int sides = countSidesForAllDirections(i, j, lines, rowSize, colSize, lowercaseChar);
-    lines[i][j] = lowercaseChar;
-    sides += checkRegion(&occurrence, i, j, lines, rowSize, colSize, lowercaseChar);
-
+int countDiagonalDuplicates(char lines[200][200], int rowSize, int colSize, char lowercaseChar){
+    int sides = 0;
     for(int p = 0; p< rowSize; p++){
         for(int q = 0; q < colSize; q++){
             if(lines[p][q] == lowercaseChar && lines[p][q-1] != lowercaseChar && lines[p+1][q] != lowercaseChar && lines[p+1][q-1]==lowercaseChar){
@@ -82,15 +77,32 @@ long countPriceForArea(int i, int j, char lines[200][200], int rowSize, int colS
             }
         }
     }
+    return sides;
 
-    printf("\n%c %d %d %d", lowercaseChar, sides, occurrence, sides * occurrence);
-    for(int k = 0; k< rowSize; k++){
-        for(int r = 0; r < colSize; r++){
-            if(lines[k][r] == lowercaseChar){
-                lines[k][r] = '_';
+}
+
+void replaceLowercase(char lines[200][200], int rowSize, int colSize, char lowercaseChar){
+
+    for(int i = 0; i< rowSize; i++){
+        for(int j = 0; j < colSize; j++){
+            if(lines[i][j] == lowercaseChar){
+                lines[i][j] = '_';
             }
         }
     }
+
+}
+
+long countPriceForArea(int i, int j, char lines[200][200], int rowSize, int colSize, char lowercaseChar){
+    int occurrence = 1;
+    int sides = countSidesForAllDirections(i, j, lines, rowSize, colSize, lowercaseChar);
+    lines[i][j] = lowercaseChar;
+    sides += checkRegion(&occurrence, i, j, lines, rowSize, colSize, lowercaseChar);
+
+    sides += countDiagonalDuplicates(lines, rowSize, colSize, lowercaseChar);
+
+    replaceLowercase(lines, rowSize, colSize, lowercaseChar);
+
     return sides * occurrence;
 }
 
