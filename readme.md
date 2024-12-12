@@ -93,5 +93,11 @@ For part two:
 
 ## **Day12:**  
 Install gcc
-Execute: `gcc Day12.c -o Day12.out`
-Execute: `Day12.out`
+
+For part one:  
+- Execute: `gcc Day12Part1.c -o Day12Part1.out`
+- Execute: `Day12Part1.out`
+
+For part two:  
+- Execute: `gcc Day12Part2.c -o Day12Part2.out`
+- Execute: `Day12Part2.out`
