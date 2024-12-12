@@ -101,3 +101,9 @@ For part one:
 For part two:  
 - Execute: `gcc Day12Part2.c -o Day12Part2.out`
 - Execute: `Day12Part2.out`
+
+
+## **Day13:**  
+Install g++
+- Execute: `gcc Day13.cpp -o Day12Part1.out`
+- Execute: `Day13.out`
