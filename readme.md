@@ -107,3 +107,7 @@ For part two:
 Install g++
 - Execute: `gcc Day13.cpp -o Day12Part1.out`
 - Execute: `Day13.out`
+
+
+## **Day14:**  
+Execute: `cscript Day14.vbs`
