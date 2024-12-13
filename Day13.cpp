@@ -4,7 +4,7 @@
 
 using namespace std;
 
-unsigned long long solveEquation(double a, double b, double c, double d, double e, double f) {
+long long solveEquation(int a, int b, int c, int d, long long e, long long f) {
     double determinant = a*d - b*c;
     if(determinant != 0) {
         double x = (e*d - b*f)/determinant;
@@ -24,29 +24,29 @@ int main()
     string first;
     string second;
 
-    double ax;
-    double ay;
-    double bx;
-    double by;
-    double resX;
-    double rexY;
+    int ax;
+    int ay;
+    int bx;
+    int by;
+    long long resX;
+    long long rexY;
 
-    unsigned long long sumPart1 = 0;
-    unsigned long long sumPart2 = 0;
+    long long sumPart1 = 0;
+    long long sumPart2 = 0;
 
     if (file.is_open()) {
         while( file >> line >> line >> first >> second)
         {
-            ax = stod(first.substr(2));
-            ay = stod(second.substr(2));
+            ax = stoi(first.substr(2));
+            ay = stoi(second.substr(2));
 
             file >> line >> line >> first >> second;
-            bx = stod(first.substr(2));
-            by = stod(second.substr(2));
+            bx = stoi(first.substr(2));
+            by = stoi(second.substr(2));
 
             file >> line >> first >> second;
-            resX = stod(first.substr(2));
-            rexY = stod(second.substr(2));
+            resX = stoll(first.substr(2));
+            rexY = stoll(second.substr(2));
 
             sumPart1 += solveEquation(ax, bx, ay, by, resX, rexY);
             sumPart2 += solveEquation(ax, bx, ay, by, resX + 10000000000000, rexY + 10000000000000);
