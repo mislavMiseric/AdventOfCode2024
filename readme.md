@@ -111,3 +111,9 @@ Install g++
 
 ## **Day14:**  
 Execute: `cscript Day14.vbs`
+
+
+## **Day15:**  
+Install Rust
+- Execute: `rustc Day15.rs -o Day15.out`
+- Execute: `Day15.out`

@@ -4,5 +4,8 @@ input.txt
 .scala-build
 .bsp
 
-# c
+# c, c++, rust
 *.out
+
+# rust
+*.pdb
