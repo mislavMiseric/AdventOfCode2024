@@ -126,5 +126,10 @@ For part two:
 
 
 ## **Day16:**  
-Instal Clojure (for Windows I suggest WSL)
+Install Clojure (for Windows I suggest WSL)
 - Execute: `clj -M Day16.clj`
+
+
+## **Day17:**  
+Install Elixir
+- Execute: `elixir Day17.exs`
