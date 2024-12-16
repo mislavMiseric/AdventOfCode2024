@@ -123,3 +123,8 @@ For part one:
 For part two: 
 - Execute: `rustc Day15Part2.rs -o Day15Part2.out`
 - Execute: `Day15Part2.out`
+
+
+## **Day16:**  
+Instal Clojure (for Windows I suggest WSL)
+- Execute: `clj -M Day16.clj`
