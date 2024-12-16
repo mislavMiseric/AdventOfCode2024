@@ -115,5 +115,11 @@ Execute: `cscript Day14.vbs`
 
 ## **Day15:**  
 Install Rust
-- Execute: `rustc Day15.rs -o Day15.out`
-- Execute: `Day15.out`
+
+For part one: 
+- Execute: `rustc Day15Part1.rs -o Day15Part1.out`
+- Execute: `Day15Part1.out`
+
+For part two: 
+- Execute: `rustc Day15Part2.rs -o Day15Part2.out`
+- Execute: `Day15Part2.out`
