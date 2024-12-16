@@ -4,7 +4,7 @@
 (def current-min-result (atom 100000))
 (def unique-tiles (atom []))
 
-(def array-3d (atom nil))
+(def cached-results (atom nil))
 
 (defn search-start [lines]
     (loop [row 0]
@@ -30,7 +30,7 @@
 )
 
 (defn was-there-with-same-orientation-and-lower-result [lines rowindex colindex orientation result]
-    (> result (get-in @array-3d [rowindex colindex orientation]))
+    (> result (get-in @cached-results [rowindex colindex orientation]))
 )
 
 (defn next-indexes-for-orientation [lines rowindex colindex orientation]
@@ -43,7 +43,7 @@
 )
 
 (defn set-new-result-in-3d [row col orientation new-value]
-    (swap! array-3d assoc-in [(int row) (int col) (int orientation)] new-value)
+    (swap! cached-results assoc-in [(int row) (int col) (int orientation)] new-value)
 )
 
 (defn play-labirinth [lines rowindex colindex orientation result path]
@@ -103,8 +103,8 @@
 )
 
 
-(defn initialize-array-3d [rows cols]
-    (reset! array-3d 
+(defn initialize-cached-results [rows cols]
+    (reset! cached-results 
         (vec 
             (for [r (range rows)]
                 (vec 
@@ -122,7 +122,7 @@
     (let [lines (vec (doall (line-seq rdr)))
         rows (count lines)
         cols (count (first lines))]
-        (initialize-array-3d rows cols)
+        (initialize-cached-results rows cols)
         (let [[row col] (search-start lines)]
             (println "Found 'S' at row:" row ", column:" col)
             (let [result (play-labirinth lines row col 1 0 [])]
