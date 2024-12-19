@@ -16,7 +16,7 @@ For part two:
 
 ## **Day2:**  
 Install Java  
-Execute: `java Day2.java`  
+- Execute: `java Day2.java`  
 
 ## **Day3:**  
 For part one:  
@@ -48,12 +48,12 @@ For part two:
 
 ## **Day6:**  
 Install Groovy  
-Execute: `groovy Day6.groovy`  
+- Execute: `groovy Day6.groovy`  
 
 
 ## **Day7:**  
 Install Python  
-Execute: `python Day7.py`  
+- Execute: `python Day7.py`  
 
 
 ## **Day8:**  
@@ -131,5 +131,15 @@ Install Clojure (for Windows I suggest WSL)
 
 
 ## **Day17:**  
-Install Elixir
-- Execute: `elixir Day17.exs`
+Install R
+
+For part one: 
+- Execute: `Rscript Day17Part1.r`
+
+For part two: 
+- Execute: `Rscript Day17Part2.r`
+
+
+## **Day18:**
+Install Dart
+- Execute: `dart Day18.dart`
