@@ -9,3 +9,6 @@ input.txt
 
 # rust
 *.pdb
+
+# nim
+*.exe

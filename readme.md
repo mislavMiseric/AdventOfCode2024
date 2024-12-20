@@ -143,3 +143,13 @@ For part two:
 ## **Day18:**
 Install Dart
 - Execute: `dart Day18.dart`
+
+
+## **Day19:**
+Install Nim
+
+For part one: 
+- Execute: `nim c -r --verbosity:0 Day19Part1.nim`
+
+For part two: 
+- Execute: `nim c -r --verbosity:0 Day19Part2.nim`
