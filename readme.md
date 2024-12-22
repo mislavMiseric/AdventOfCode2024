@@ -153,3 +153,13 @@ For part one:
 
 For part two: 
 - Execute: `nim c -r --verbosity:0 Day19Part2.nim`
+
+
+## **Day20:**
+Install Zig
+
+For part one: 
+- Execute: `zig run Day20Part1.zig -femit-bin=Day20Part1.out`
+
+For part two:
+- Execute: `zig run Day20Part2.zig -femit-bin=Day20Part2.out`

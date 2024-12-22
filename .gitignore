@@ -4,11 +4,14 @@ input.txt
 .scala-build
 .bsp
 
-# c, c++, rust
+# c, c++, rust, zig
 *.out
 
-# rust
+# rust, zig
 *.pdb
 
 # nim
 *.exe
+
+# zig
+*.obj
